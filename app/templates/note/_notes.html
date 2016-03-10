@@ -5,16 +5,9 @@
 	<h4 align="center"> {{ note.notename }} </h4>
       </a>
       <p>
-      <font color=grey> {{ note.about_this }} </font>
+      <font color=grey> 简介: {{ note.about_this }} </font>
       </p>
-
-     <div class="post-body">
-       {% if note.contents_html %}
-       {{ note.contents_html |safe }}
-       {% else %}
-       {{ note.contents }}
-       {% endif %}
-     </div>
+      <hr />
   </li>
   {% endfor %}
 </ul>

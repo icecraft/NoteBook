@@ -4,19 +4,10 @@
       <a href="{{ url_for('topic.show_topic', id=topic.id) }}">
 	<h4 class="font-color:black" align="center"> {{ topic.topicname }} </h4>
       </a>
-      <p > <font color=grey> 发表于 {{topic.timestamp.date() }} &nbsp; &nbsp; 修改于
-	  {{topic.lastupdate_timestamp.date() }}
-	  {{topic.about_this}} 
-	</font>
-      </p>
-      
-     <div class="post-body">
-       {% if topic.contens_html %}
-       {{ topic.contens_html|safe }}
-       {% else %}
-       {{ topic.contents }}
-       {% endif %}
-     </div>
+      <font color=grey>
+	简介: {{topic.about_this}}
+      </font>
+      <hr />
   </li>
   {% endfor %}
 </ul>
