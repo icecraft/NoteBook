@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*
 from .. import db
 from datetime import datetime
-from flask.ext.login import UserMixin, AnonymousUserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
 from markdown import markdown
 import bleach
 from .comment import Comment

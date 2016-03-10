@@ -12,14 +12,12 @@ from datetime import datetime
 @login_required
 def delete_comment(id):
     comment = Comment.query.filter_by(id=id).first_or_404()
-    if comment.topic:
-            tid = comment.topic.id
-            db.session.delete(comment)
-            return redirect(url_for('topic.show_topic', id=tid))
-    else:
-            tid = comment.note.id
-            db.session.delete(comment)
-            return redirect(url_for('note.show_note', id=tid))
+    tid, turl = ( comment.topic.id, 'topic.show_topic')  if comment.topic else \
+                   (comment.note.id, 'note.show_note')
+
+    db.session.delete(comment)
+    return redirect(url_for(turl, id=tid))
+
     
 @comment.route('/edit_comment/<int:id>', methods=['GET', 'POST'])
 @login_required

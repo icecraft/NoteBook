@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*
 from flask.ext.wtf import Form
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
+from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import Required, Length, Email, Regexp, EqualTo
 from wtforms import ValidationError
 from ..models import User
 from flask.ext.pagedown.fields import PageDownField
-
-
 
 DEFAULT_NoteBook_Contents="""### Miscellanise
 ### Essential
