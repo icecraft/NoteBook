@@ -41,7 +41,7 @@
       更改于 {{ comment.lastupdate_timestamp.date()}}
     </font>
 -->
-    {{ comment.contents_html|safe}}
+    {{ comment.contents_html |safe }}
     <hr style="border-width:0" />
     <p>
       <a href="{{ url_for('comment.edit_comment', id=comment.id)}}" >
