@@ -94,7 +94,8 @@
               <li><a href="{{ url_for('main.index') }}">首页</a></li>
               <li><a href="{{ url_for('topic.topics') }}">话题</a></li>
               <li><a href="{{ url_for('note.notes') }}">笔记</a></li>
-              <li><a href="{{ url_for('material.materials') }}">资源收集</a></li>	      
+              <li><a href="{{ url_for('material.materials') }}">资源收集</a></li>
+              <li><a href="{{ url_for('libstudy.libstudies') }}">LibStudy</a></li>	      	      
             </ul>
             <ul class="nav navbar-nav navbar-right ">
               <li class="dropdown">
@@ -106,6 +107,7 @@
 		      <li><a href="{{url_for('note.add_note', NoteType='BookNote')}}">New Book Note</a></li>
 		      <li><a href="{{url_for('note.add_note', NoteType='SourceNote')}}">New Source Note</a></li>
                       <li><a href="{{url_for('material.add_material')}}">New Material</a></li>
+                      <li><a href="{{url_for('libstudy.add_libstudy')}}">New LibStudy</a></li>		      
                     </ul>
 	      </li>
 

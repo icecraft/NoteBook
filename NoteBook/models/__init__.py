@@ -4,3 +4,4 @@ from .topic import Topic
 from .note import Note
 from .comment import Comment
 from .material import Material
+from .libstudy import LibStudy

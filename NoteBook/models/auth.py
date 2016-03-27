@@ -18,6 +18,10 @@ class User(UserMixin, db.Model):
                             cascade='all, delete-orphan')
     notebook = db.relationship('Note', backref='author', lazy='dynamic',
                                cascade='all, delete-orphan')
+
+    libstudy = db.relationship('LibStudy', backref='author', lazy='dynamic',
+                               cascade='all, delete-orphan')
+    
     def __repr__(self):
         return '<User %r>' % self.username
 

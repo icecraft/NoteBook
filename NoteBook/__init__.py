@@ -45,6 +45,9 @@ def create_app(config_name):
 
     from .material import material as material_blueprint
     app.register_blueprint(material_blueprint, url_prefix='/material')
+
+    from .libstudy import libstudy as libstudy_blueprint
+    app.register_blueprint(libstudy_blueprint, url_prefix='/libstudy')
     
     return app
 

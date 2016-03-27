@@ -17,10 +17,12 @@ class Config:
 
     INDEX_TOPICS_PER_PAGE = 4
     INDEX_NOTES_PER_PAGE = 4
-    INDEX_MATERIALS_PER_PAGE = 4    
+    INDEX_MATERIALS_PER_PAGE = 4
+    INDEX_LIBSTUDIES_PER_PAGE = 4        
 
     SEARCH_TOPICS_PER_PAGE = 2
     SEARCH_NOTES_PER_PAGE = 2
+    SEARCH_LIBSTUDY_PER_PAGE = 2    
     
     @staticmethod
     def init_app(app):
